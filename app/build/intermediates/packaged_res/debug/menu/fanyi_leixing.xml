@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/auto"
+        android:title="自动检测" />
+    <item
+        android:id="@+id/ZH_CN2EN"
+        android:title="中文翻译英文" />
+    <item
+        android:id="@+id/ZH_CN2JA"
+        android:title="中文翻译日文" />
+    <item
+        android:id="@+id/ZH_CN2KR"
+        android:title="中文翻译韩语" />
+    <item
+        android:id="@+id/ZH_CNFR"
+        android:title="中文翻译法语" />
+    <item
+        android:id="@+id/ZH_CN2RU"
+        android:title="中文翻译俄语" />
+    <item
+        android:id="@+id/ZH_CN2SP"
+        android:title="中文翻译西班牙语" />
+    <item
+        android:id="@+id/EN2ZH_CN"
+        android:title="英语翻译为中文" />
+    <item
+        android:id="@+id/JA2ZH_CN"
+        android:title="日语翻译为中文" />
+    <item
+        android:id="@+id/KR2ZH_CN"
+        android:title="韩语翻译为中文" />
+    <item
+        android:id="@+id/FR2ZH_CN"
+        android:title="法语翻译为中文" />
+    <item
+        android:id="@+id/RU2ZH_CN"
+        android:title="俄语翻译为中文" />
+    <item
+        android:id="@+id/SP2ZH_CN"
+        android:title="西班牙语翻译为中文" />
+
+</menu>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="#FFFEC2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不管遇到什么事情，每天都要开开心心的哦！！"
+                android:layout_marginStart="22dp"
+                />
+
+        </LinearLayout>
+        <!--旋转图片开始-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            app:cardCornerRadius="100dp"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <ImageView
+                android:id="@+id/tupian1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/cut"
+                android:contentDescription="TODO" />
+        </androidx.cardview.widget.CardView>
+        <!--图片旋转结束-->
+    </RelativeLayout>
+    <!--第一部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#C5F5FF">
+        <!--圆角布局组件-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="11dp"
+            android:backgroundTint="#C8FFFE"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:id="@+id/fanyidaanniu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#C8FFFE">
+                <!--自动检测部分-->
+                <TextView
+                    android:id="@+id/fanyi_leixing0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="48dp"
+                    android:onClick="leixing"
+                    android:text="自动检测"
+                    android:textSize="17sp" />
+                <!--翻译按钮部分-->
+                <TextView
+                    android:id="@+id/fanyi_anniu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:contextClickable="true"
+                    android:enabled="true"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp"
+                    android:focusable="true"
+                    android:text="翻译"
+                    android:textSize="17sp" />
+                <!--输入框-->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="33dp"
+                    android:layout_marginBottom="33dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <EditText
+                            android:id="@+id/shurukuang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:autofillHints=""
+                            android:background="#00FFFFFF"
+                            android:gravity="center"
+                            android:hint="要翻译什么呢？"
+                            tools:ignore="RelativeOverlap,TouchTargetSizeCheck" />
+                        <!--输入框下边的装饰线-->
+                        <View
+                            android:layout_width="220dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/shurukuang"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/purple_200" />
+                    </RelativeLayout>
+                </ScrollView>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <!--第二部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D0FFFD"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <!--有道翻译模块-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="11dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#FFE8F2"
+                android:gravity="center"
+                android:onClick="fanyi_erjiyemian">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="100dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/youdao" />
+                </androidx.cardview.widget.CardView>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/YoudaofanyiText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="等待中⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾" />
+                    </RelativeLayout>
+                </ScrollView>
+
+            </LinearLayout>
+            <!--有道翻译模块-->
+        </androidx.cardview.widget.CardView>
+        <!--谷歌翻译模块-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="11dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#FFE8F2"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="100dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/baidu" />
+                </androidx.cardview.widget.CardView>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/BaiufanyiText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="等待中ヾ(@^▽^@)ノ " />
+                    </RelativeLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--每日一言模块-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="#FFE8F2"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="meiriyiyan_genxing"
+                    app:cardCornerRadius="100dp"
+                    tools:ignore="SpeakableTextPresentCheck">
+
+                    <ImageView
+                        android:id="@+id/tupian2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/yiyan" />
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                        <ScrollView
+                            android:id="@+id/meiriyiyan1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:padding="5dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/meiriyiyan"
+                                    android:layout_width="285dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="“春空千鹤若幻梦，夕波千鸟若长鸣”"
+                                    android:textSize="15sp"
+                                    tools:ignore="TextSizeCheck" />
+                            </RelativeLayout>
+                        </ScrollView>
+                        <TextView
+                            android:id="@+id/origin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/meiriyiyan1"
+                            android:layout_alignEnd="@+id/meiriyiyan1"
+                            android:layout_marginBottom="1dp"
+                            android:text="————《千只鹤》"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
